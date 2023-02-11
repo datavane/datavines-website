@@ -1,0 +1,72 @@
+{
+  "zh-CN": {
+    "common": {
+      "features": "核心特性"
+    },
+    "slogan": {
+      "key": "更好地了解您的数据!",
+      "description": "数据可观测性平台，数据目录&数据质量监控平台"
+    },
+    "feature": [
+      {
+        "title": "数据目录",
+        "details": "自动获取数据源元数据，构造企业级数据目录；定时监听数据变更情况"
+      },
+      {
+        "title": "数据质量监控",
+        "details": "平台内置多个数据质量检查规则，开箱即用；提供告警消息管理帮助你更好把握质量情况"
+      },
+      {
+        "title": "微内核+插件化",
+        "details": "平台以插件化设计为核心，支持数据源、规则、告警组件、错误数据存储和注册中心等插件设计"
+      },
+      {
+        "title": "数据概览",
+        "details": "让你能够更快更轻松地了解每个数据集的情况，做到心里有数"
+      },
+      {
+        "title": "健壮稳定",
+        "details": "大数据领域资深玩家打造,设计经过精心打磨,测试用例齐全"
+      },
+      {
+        "title": "多种运行模式",
+        "details": "DataVines不仅提供平台帮助你观测数据，也支持本地模式集成到调度系统的工作流中"
+      }
+    ]
+  },
+  "en": {
+    "common": {
+      "features": "Features"
+    },
+    "slogan": {
+      "key": "Know your data easier!",
+      "description":  "Data Observability Platform, Data Catalog & Data Quality Monitoring Platform."
+    },
+    "feature": [
+      {
+        "title": "Data Catalog",
+        "details": "Automatically obtain datasource metadata and construct enterprise-level data catalog; Regularly monitor data schema changes."
+      },
+      {
+        "title": "Data Quality Monitor",
+        "details": "Multiple data quality check rules are built in the platform, which can be used out of the box; Provide alarm message management to help you better grasp the quality situation."
+      },
+      {
+        "title": "Microkernel & Plug-in",
+        "details": "With plug-in design as the core, the platform supports plug-in design of datasources, rules, alarm components, error data storage and registry."
+      },
+      {
+        "title": "Data Profile",
+        "details": "Data profile enables you to understand the situation of each data set faster and more easily, so that you have a clear idea."
+      },
+      {
+        "title": "Robust and stable",
+        "details": "Created by big data experts. Well-designed. Complete test cases."
+      },
+      {
+        "title": "Multiple Mode",
+        "details": "DataVines not only provides a platform to help you observe data, but also supports local mode integration into the workflow of the scheduling system."
+      }
+    ]
+  }
+}
