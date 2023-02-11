@@ -24,7 +24,7 @@ const config = {
   title: 'DataVines',
   tagline: 'DataVines - Next-gen Data Observability platform',
   url: 'https://datavines.io',
-  baseUrl: '/',
+  baseUrl: '/datavines-website/',
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'image/favicon.ico',
