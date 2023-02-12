@@ -120,6 +120,11 @@ const config = {
           ],
         },
         {
+              to: '/docs/roadmap',
+              label: 'Roadmap',
+              position: 'left'
+        },
+        {
           to: '/docs/faq',
           position: 'left',
           label: 'FAQ'

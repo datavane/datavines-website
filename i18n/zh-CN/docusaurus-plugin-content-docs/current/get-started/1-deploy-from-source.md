@@ -8,7 +8,7 @@ sidebar_position: 1
 
 在安装`DataVines`之前请确保你的服务器上已经安装下面软件
 - `Git`，确保 `git clone`的顺利执行
-- `JDK`，确保 `jdk >= 8`
+- `JDK`，确保 `jdk = 8`
 - `Maven`, 确保项目的顺利打包（当然你也可以在本地打包以后上传至服务器）
 
 ## 下载代码

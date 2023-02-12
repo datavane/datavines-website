@@ -66,5 +66,13 @@
   "item.label.Thanks": {
     "message": "致谢",
     "description": "Navbar item with label Thanks"
+  },
+  "item.label.Roadmap": {
+    "message": "未来规划",
+    "description": "Navbar item with label Roadmap"
+  },
+  "item.label.FAQ": {
+    "message": "常见问题",
+    "description": "Navbar item with label FAQ"
   }
 }
