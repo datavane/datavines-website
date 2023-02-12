@@ -1,5 +1,5 @@
 ---
-id: 'deply-from-source'
+id: 'deploy-from-source'
 title: '用源码部署'
 sidebar_position: 1
 ---

@@ -7,7 +7,8 @@ import StartUp from "../../../static/home/dashboard.svg"
 
 export default function () {
   const isBrowser = useIsBrowser();
-  const language = isBrowser && location.pathname.indexOf('/zh-CN/') === 0 ? 'zh-CN' : 'en'
+  const language = isBrowser && location.pathname.indexOf('/datavines-website/zh-CN/') === 0 ? 'zh-CN' : 'en';
+  const baseUrl = isBrowser && location.pathname.indexOf('/datavines-website/zh-CN/') === 0 ? '/datavines-website/zh-CN' : '/datavines-website';
   const dataSource = config?.[language];
 
   return (
@@ -28,7 +29,7 @@ export default function () {
                 target="_blank">
                 <i className="lni-github-original"></i>&nbsp;GitHub
               </a>
-              <a className="btn datavines-btn btn-green mt-30 ml-3 ztop" href="/docs/get-started/deply-from-source"
+              <a className="btn datavines-btn btn-green mt-30 ml-3 ztop" href={baseUrl + "/docs/get-started/deploy-from-source"}
                 style={{ marginLeft: '10px' }}>
                 <i className="lni-play"></i>&nbsp;Get started
               </a>
@@ -42,7 +43,6 @@ export default function () {
               </div>
             </div>
           </div>
-          {/* hero image */}
           <div className="col-6 align-self-center" >
             <div className="mt-5 mt-2 text-right" data-aos="fade-up" data-aos-delay="100">
               <StartUp className="img-fluid" style={{transform: 'translateY(3.3rem)'}} />
