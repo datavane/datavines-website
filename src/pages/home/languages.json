@@ -18,7 +18,7 @@
       },
       {
         "title": "插件化设计",
-        "details": "平台以插件化设计为核心，支持数据源、规则、告警组件、错误数据存储和注册中心等插件扩展"
+        "details": "平台以插件化设计为核心，支持数据源、规则、执行引擎、告警组件、错误数据存储和注册中心等插件扩展"
       },
       {
         "title": "数据概览",
@@ -26,10 +26,10 @@
       },
       {
         "title": "多种运行模式",
-        "details": "DataVines不仅提供平台帮助你观测数据，也支持本地模式集成到调度系统的工作流中"
+        "details": "不仅提供平台帮助你观测数据，也支持本地模式集成到调度系统的工作流中"
       },
       {
-        "title": "易部署&高可用",
+        "title": "容易部署&高可用",
         "details": "平台依赖少，容易部署；支持水平扩容，自动容错"
       }
     ]
@@ -61,7 +61,7 @@
       },
       {
         "title": "Multiple Mode",
-        "details": "DataVines not only provides a platform to help you observe data, but also supports local mode integration into the workflow of the scheduling system."
+        "details": "Not only provides a platform to help you observe data, but also supports local mode integration into the workflow of the scheduling system."
       },
       {
         "title": "Easy Deploy & HA",
