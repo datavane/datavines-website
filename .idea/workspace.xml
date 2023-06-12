@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b765ed3-9f1c-4415-aefb-3c78f0d9db47" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/datavines-website.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sbt.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/development/3-source-module-explanation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/i18n/zh-CN/docusaurus-plugin-content-docs/current/development/3-source-module-explanation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/doc/image/error_data_storage_mysql.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/i18n/zh-CN/docusaurus-plugin-content-docs/current/development/1-architeture-design.md" beforeDir="false" afterPath="$PROJECT_DIR$/i18n/zh-CN/docusaurus-plugin-content-docs/current/development/1-architeture-design.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/i18n/zh-CN/docusaurus-plugin-content-docs/current/features/3-slas.md" beforeDir="false" afterPath="$PROJECT_DIR$/i18n/zh-CN/docusaurus-plugin-content-docs/current/features/3-slas.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/i18n/zh-CN/docusaurus-plugin-content-docs/current/features/4-error-data-storage.md" beforeDir="false" afterPath="$PROJECT_DIR$/i18n/zh-CN/docusaurus-plugin-content-docs/current/features/4-error-data-storage.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -361,7 +349,7 @@
       <workItem from="1677289790799" duration="3070000" />
       <workItem from="1679825248250" duration="6961000" />
       <workItem from="1686061024874" duration="3048000" />
-      <workItem from="1686580702965" duration="1863000" />
+      <workItem from="1686580702965" duration="2116000" />
     </task>
     <task id="LOCAL-00001" summary="[Feature][All] First Commit">
       <created>1676125565287</created>

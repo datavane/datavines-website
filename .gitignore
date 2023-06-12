@@ -7,7 +7,7 @@
 # Generated files
 .docusaurus
 .cache-loader
-.idea/*
+.idea
 package-lock.json
 # Misc
 .DS_Store
