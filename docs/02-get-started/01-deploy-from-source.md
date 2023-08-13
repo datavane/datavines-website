@@ -1,7 +1,6 @@
 ---
 id: 'deploy-from-source'
 title: 'Deploy From Source'
-sidebar_position: 1
 ---
 
 ## Environment preparation

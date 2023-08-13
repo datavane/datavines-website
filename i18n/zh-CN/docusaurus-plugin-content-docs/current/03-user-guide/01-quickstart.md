@@ -1,7 +1,6 @@
 ---
 id: 'quick-start'
 title: '快速上手'
-sidebar_position: 1
 ---
 
 ## 创建数据源

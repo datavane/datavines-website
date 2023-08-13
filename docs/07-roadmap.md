@@ -1,7 +1,6 @@
 ---
 id: 'roadmap'
 title: 'Roadmap'
-sidebar_position: 7
 ---
 ## V1.1.0
 - Optimize the local mode and support online generation of configuration

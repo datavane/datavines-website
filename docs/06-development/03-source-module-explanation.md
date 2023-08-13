@@ -1,7 +1,6 @@
 ---
 id: 'source-module-explanation'
 title: 'Source Module Explanation'
-sidebar_position: 3
 ---
 # Datavines Code Architecture Analysis
 
