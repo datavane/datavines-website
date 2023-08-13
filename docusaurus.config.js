@@ -208,7 +208,7 @@ const config = {
   plugins: [
     'docusaurus-plugin-less',
     [
-      '@docusaurus/04-plugin-content-docs',
+      '@docusaurus/plugin-content-docs',
       {
         id: 'community',
         path: 'community',
