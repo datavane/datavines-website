@@ -9,7 +9,7 @@
   },
   "link.item.label.Releases": {
     "message": "版本",
-    "description": "The label of footer link with label=Releases linking to https://github.com/datavines-ops/datavines/releases"
+    "description": "The label of footer link with label=Releases linking to https://github.com/datavane/datavines/releases"
   },
   "link.title.Community": {
     "message": "社区",
@@ -21,16 +21,16 @@
   },
   "link.item.label.GitHub": {
     "message": "GitHub",
-    "description": "The label of footer link with label=GitHub linking to https://github.com/datavines-ops/datavines"
+    "description": "The label of footer link with label=GitHub linking to https://github.com/datavane/datavines"
   },
   "link.item.label.Issue Tracker": {
     "message": "Issue Tracker",
-    "description": "The label of footer link with label=Issue Tracker linking to https://github.com/datavines-ops/datavines/issues"
+    "description": "The label of footer link with label=Issue Tracker linking to https://github.com/datavane/datavines/issues"
   },
 
   "link.item.label.Pull Requests": {
     "message": "Pull Requests",
-    "description": "The label of footer link with label=Pull Requests linking to https://github.com/datavines-ops/datavines/pulls"
+    "description": "The label of footer link with label=Pull Requests linking to https://github.com/datavane/datavines/pulls"
   }
 
 }

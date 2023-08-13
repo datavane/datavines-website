@@ -1,9 +1,9 @@
-DataVines website is compiled using node, using Docusaurus framework components
+Datavines website is compiled using node, using Docusaurus framework components
 
 #### Environment Preparation
 Download and install nodejs (version>12.5.0)
 #### Download Code
-Clone the code to the local `git clone https://github.com/datavines-ops/datavines-website.git`
+Clone the code to the local `git clone https://github.com/datavane/datavines-website.git`
 #### Install Dependencies
 Run `npm install` to install the required dependent libraries.
 #### Start English version of the website

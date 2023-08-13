@@ -4,11 +4,11 @@ title: '开发环境准备'
 sidebar_position: 2
 ---
 
-# DataVines 环境搭建指南
+# Datavines 环境搭建指南
 
 ## 前置条件
 
-在搭建 DataVines 开发环境之前请确保你已经安装一下软件
+在搭建 Datavines 开发环境之前请确保你已经安装一下软件
 
 * [Git](https://git-scm.com/downloads): 版本控制系统
 * [JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html): 后端开发
@@ -21,7 +21,7 @@ sidebar_position: 2
 ```
 mkdir datavines
 cd datavines
-git clone https://github.com/datavines-ops/datavines.git
+git clone https://github.com/datavane/datavines.git
 ```
 ### 编译源码 
 
@@ -30,13 +30,13 @@ git clone https://github.com/datavines-ops/datavines.git
 
 ### 数据库
 
-DataVines 的元数据存储在关系型数据库中，目前支持的关系型数据库包括 MySQL 以及 PostgreSQL。下面以MySQL为例，启动数据库并创建新 database 作为 DataVines 元数据库，这里以数据库名 datavines 为例
+Datavines 的元数据存储在关系型数据库中，目前支持的关系型数据库包括 MySQL 以及 PostgreSQL。下面以MySQL为例，启动数据库并创建新 database 作为 Datavines 元数据库，这里以数据库名 datavines 为例
 
 创建完新数据库后，将 `script/sql/datavines-mysql.sql` 下的 sql 文件直接在 MySQL 中运行，完成数据库初始化
 
 ## 启动后端
 
-下面步骤将引导如何启动 DataVines 后端服务
+下面步骤将引导如何启动 Datavines 后端服务
 
 ### 必要的准备工作
 
@@ -58,10 +58,10 @@ DataVines 的元数据存储在关系型数据库中，目前支持的关系型�
 
 ### 启动服务
 
-启动 `DataVinesServer`
+启动 `DatavinesServer`
 
 > 在VM Options中添加
  - `-Dspring.profiles.active=mysql` 中 `mysql` 表示指定的配置文件
  - `-Dlogging.config=classpath:server-logback.xml` 
  
-当你在Console里面看到 `[INFO] 2022-04-10 12:29:05.447 io.datavines.server.DataVinesServer:[61] - Started DataVinesServer in 3.97 seconds (JVM running for 4.69)` 日志的时候，证明服务已经启动成功了
+当你在Console里面看到 `[INFO] 2022-04-10 12:29:05.447 io.datavines.server.DatavinesServer:[61] - Started DatavinesServer in 3.97 seconds (JVM running for 4.69)` 日志的时候，证明服务已经启动成功了

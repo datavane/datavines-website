@@ -21,8 +21,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'DataVines',
-  tagline: 'DataVines - Next-gen Data Observability platform',
+  title: 'Datavines',
+  tagline: 'Datavines - Next-gen Data Observability platform',
   url: 'https://datavines.io',
   baseUrl: '/datavines-website/',
   onBrokenLinks: 'ignore',
@@ -67,14 +67,14 @@ const config = {
           editLocalizedFiles: true,
           sidebarCollapsed: false,
           // Please change this to your repo.
-          editUrl: 'https://github.com/datavines-ops/datavines-website/edit/dev/'
+          editUrl: 'https://github.com/datavane/datavines-website/edit/dev/'
         },
 
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/datavines-ops/datavines-website/edit/dev/',
+            'https://github.com/datavane/datavines-website/edit/dev/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -89,9 +89,9 @@ const config = {
       disableSwitch: true
     },
     navbar: {
-      title: 'DataVines',
+      title: 'Datavines',
       logo: {
-        alt: 'DataVines Logo',
+        alt: 'Datavines Logo',
         src: 'image/logo.png',
       },
       items: [
@@ -130,7 +130,7 @@ const config = {
           label: 'FAQ'
         },
         {
-          href: 'https://github.com/datavines-ops/datavines',
+          href: 'https://github.com/datavane/datavines',
           label: 'GitHub',
           position: 'left',
         },
@@ -149,15 +149,15 @@ const config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/datavines-ops/datavines',
+              href: 'https://github.com/datavane/datavines',
             },
             {
               label: 'Issue Tracker',
-              href: 'https://github.com/datavines-ops/datavines/issues',
+              href: 'https://github.com/datavane/datavines/issues',
             },
             {
               label: 'Pull Requests',
-              href: 'https://github.com/datavines-ops/datavines/pulls',
+              href: 'https://github.com/datavane/datavines/pulls',
             },
           ],
         },
@@ -170,11 +170,11 @@ const config = {
             },
             {
               label: 'Releases',
-              href: 'https://github.com/datavines-ops/datavines/releases',
+              href: 'https://github.com/datavane/datavines/releases',
             },
             {
               label: 'FAQ',
-              href: 'https://github.com/datavines-ops/datavines/issues/507',
+              href: 'https://github.com/datavane/datavines/issues/507',
             }
           ],
         },
@@ -184,7 +184,7 @@ const config = {
               html: `
                   <div class="footer-left-box">
                     <div class="flex align-center footer-system">
-                      <span class='system-title'>About DataVines</span>
+                      <span class='system-title'>About Datavines</span>
                     </div>
                     <p>Next-gen Data Observability platform</p>
                   </div>`
@@ -193,7 +193,7 @@ const config = {
           ],
         },
       ],
-      copyright: `Copyright © 2022-${new Date().getFullYear()} DataVines Community.`,
+      copyright: `Copyright © 2022-${new Date().getFullYear()} Datavines Community.`,
         
     },
 

@@ -1,9 +1,9 @@
 const  systemConfiguration={
     github:{
-        "projectUrl":"https://github.com/datavines-ops/datavines",
-        "projectReleaseUrl":"https://github.com/datavines-ops/datavines/releases",
-        "projectIssueUrl":"https://github.com/datavines-ops/datavines/issues",
-        "projectPrUrl":"https://github.com/datavines-ops/datavines/pulls",
+        "projectUrl":"https://github.com/datavane/datavines",
+        "projectReleaseUrl":"https://github.com/datavane/datavines/releases",
+        "projectIssueUrl":"https://github.com/datavane/datavines/issues",
+        "projectPrUrl":"https://github.com/datavane/datavines/pulls",
     },
 }
 export  default systemConfiguration

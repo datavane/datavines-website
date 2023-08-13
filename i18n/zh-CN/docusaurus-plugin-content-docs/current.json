@@ -1,0 +1,18 @@
+{
+  "sidebar.tutorialSidebar.category.Development": {
+    "message": "开发指南",
+    "description": "The label for category Development in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Get Started": {
+    "message": "入门指南",
+    "description": "The label for category Get Started in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Integration": {
+    "message": "集成",
+    "description": "The label for category Integration in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.User Guide": {
+    "message": "用户指南",
+    "description": "The label for category User Guide in sidebar tutorialSidebar"
+  }
+}

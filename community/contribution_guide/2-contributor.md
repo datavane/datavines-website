@@ -9,8 +9,8 @@ You can report a bug, submit a new function enhancement suggestion, or submit a 
 ## Submit an Issue
 
  - Before submitting an issue, please go through a comprehensive search to make sure the problem cannot be solved just by searching.
- - Check the [Issue List](https://github.com/datavines-ops/datavines/issues) to make sure the problem is not repeated.
- - [Create](https://github.com/datavines-ops/datavines/issues/new/choose) a new issue and choose the type of issue.
+ - Check the [Issue List](https://github.com/datavane/datavines/issues) to make sure the problem is not repeated.
+ - [Create](https://github.com/datavane/datavines/issues/new/choose) a new issue and choose the type of issue.
  - Define the issue with a clear and descriptive title.
  - Fill in necessary information according to the template.
  - Please pay attention for your issue, you may need provide more information during discussion.
@@ -19,16 +19,16 @@ You can report a bug, submit a new function enhancement suggestion, or submit a 
 
 **1. Prepare repository**
 
-Go to [DataVines GitHub Repo]( https://github.com/datavines-ops/datavines ) and fork repository to your account.
+Go to [Datavines GitHub Repo]( https://github.com/datavane/datavines ) and fork repository to your account.
 
 Clone repository to local machine.
 ```shell
 git clone https://github.com/(your_github_name)/datavines.git
 ```
 
-Add DataVines remote repository.
+Add Datavines remote repository.
 ```shell
-git remote add upstrem https://github.com/datavines-ops/datavines.git
+git remote add upstrem https://github.com/datavane/datavines.git
 git remote -v
 ```
 
@@ -64,11 +64,11 @@ git push origin issueNo
 
  - Send a pull request to the master branch.
  - The other developer will do code review before discussing some details (including the design, the implementation and the performance) with you. The request will be merged into the branch of current development version after the edit is well enough.
- - At last, congratulations on being an contributor of DataVines
+ - At last, congratulations on being an contributor of Datavines
 
 **6. Delete Branch**
 
- - You can delete the remote branch (origin/issueNo) and the local branch (issueNo) associated with the remote branch (origin/issueNo) after the mentor merged the pull request into the master branch of DataVines.
+ - You can delete the remote branch (origin/issueNo) and the local branch (issueNo) associated with the remote branch (origin/issueNo) after the mentor merged the pull request into the master branch of Datavines.
  
 ```shell
 git checkout dev

@@ -4,7 +4,7 @@ title: 'Environment Preparation'
 sidebar_position: 2
 ---
 
-# DataVines Environmental Setup Guide
+# Datavines Environmental Setup Guide
 
 ## Software Requests
 
@@ -19,7 +19,7 @@ Please make sure you have installed the software as follow
 ```
 mkdir datavines
 cd datavines
-git clone https://github.com/datavines-ops/datavines.git
+git clone https://github.com/datavane/datavines.git
 ```
 ### Compile source code  
 
@@ -28,13 +28,13 @@ git clone https://github.com/datavines-ops/datavines.git
 
 ### Database
 
-The DataVines's metadata is stored in relational database. Currently supported MySQL and Postgresql. We use MySQL as an example. Start the database and create a new database named datavines as DataVines metabase
+The Datavines's metadata is stored in relational database. Currently supported MySQL and Postgresql. We use MySQL as an example. Start the database and create a new database named datavines as Datavines metabase
 
 After creating the new database, run the sql file under`script/sql/datavines-mysql.sql` to complete the database initialization
 
-## Start DataVinesServer
+## Start DatavinesServer
 
-Following steps will guide how to start the DataVinesServer
+Following steps will guide how to start the DatavinesServer
 
 ### Prepare
 
@@ -56,10 +56,10 @@ Following steps will guide how to start the DataVinesServer
 
 ### Start Service
 
-Start `DataVinesServer`
+Start `DatavinesServer`
 
 > add options in VM Options 
  - `-Dspring.profiles.active=mysql` 
  - `-Dlogging.config=classpath:server-logback.xml` 
  
-When you see the log that `[INFO] 2022-04-10 12:29:05.447 io.datavines.server.DataVinesServer:[61] - Started DataVinesServer in 3.97 seconds (JVM running for 4.69)` in console，DataVinesServer started successfully.
+When you see the log that `[INFO] 2022-04-10 12:29:05.447 io.datavines.server.DatavinesServer:[61] - Started DatavinesServer in 3.97 seconds (JVM running for 4.69)` in console，DatavinesServer started successfully.

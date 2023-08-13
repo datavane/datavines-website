@@ -8,8 +8,8 @@ sidebar_position: 2
 ## 提交 issue
 
  - 在提交 issue 之前，请经过充分的搜索，确定该 issue 不是通过简单的检索即可以解决的问题。
- - 查看 [issue 列表](https://github.com/datavines-ops/datavines/issues)，确定该 issue 不是一个重复的问题。
- - [新建](https://github.com/datavines-ops/datavines/issues/new/choose)一个 issue 并选择您的 issue 类型。
+ - 查看 [issue 列表](https://github.com/datavane/datavines/issues)，确定该 issue 不是一个重复的问题。
+ - [新建](https://github.com/datavane/datavines/issues/new/choose)一个 issue 并选择您的 issue 类型。
  - 使用一个清晰并有描述性的标题来定义 issue。
  - 根据模板填写必要信息。
  - 请对自己提交的 issue 保持关注，在讨论中进一步提供必要信息。
@@ -18,16 +18,16 @@ sidebar_position: 2
 
 **1. 准备仓库**
 
-到 [DataVines GitHub Repo]( https://github.com/datavines-ops/datavines ) fork 仓库到你的 GitHub 账号。
+到 [Datavines GitHub Repo]( https://github.com/datavane/datavines ) fork 仓库到你的 GitHub 账号。
 
 克隆到本地。
 ```shell
 git clone https://github.com/(your_github_name)/datavines.git
 ```
 
-添加 DataVines 远程仓库。
+添加 Datavines 远程仓库。
 ```shell
-git remote add upstream https://github.com/datavines-ops/datavines.git
+git remote add upstream https://github.com/datavane/datavines.git
 git remote -v
 ```
 
@@ -50,7 +50,7 @@ git checkout -b issueNo
 
 **4. 编码**
 
- - 请您在开发过程中遵循 DataVines 的[开发规范](code-conduct.md)。并在准备提交 pull request 之前完成相应的检查。
+ - 请您在开发过程中遵循 Datavines 的[开发规范](code-conduct.md)。并在准备提交 pull request 之前完成相应的检查。
  - 将修改的代码 push 到 fork 库的分支上。
 
 ```shell
@@ -62,13 +62,13 @@ git push origin issueNo
 
 **5. 提交 PR**
 
- - 发送一个 pull request 到 DataVines 的 dev 分支。
+ - 发送一个 pull request 到 Datavines 的 dev 分支。
  - 接着会有其他开发者做 CodeReview，然后他会与您讨论一些细节（包括设计，实现，性能等）。当相应的开发者对本次修改满意后，会将提交合并到当前开发版本的分支中。
- - 最后，恭喜您已经成为了 DataVines 的贡献者！
+ - 最后，恭喜您已经成为了 Datavines 的贡献者！
 
 **6. 删除分支**
 
- - 在将 pull request 合并到 DataVines 的 dev 分支中之后，您就可以将远程的分支（origin/issueNo）及与远程分支（origin/issueNo）关联的本地分支（issueNo）删除。
+ - 在将 pull request 合并到 Datavines 的 dev 分支中之后，您就可以将远程的分支（origin/issueNo）及与远程分支（origin/issueNo）关联的本地分支（issueNo）删除。
  
 ```shell
 git checkout dev
