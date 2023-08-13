@@ -14,5 +14,29 @@
   "sidebar.tutorialSidebar.category.User Guide": {
     "message": "用户指南",
     "description": "The label for category User Guide in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Features": {
+    "message": "特性",
+    "description": "The label for category Features in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Plugin Development": {
+    "message": "插件开发",
+    "description": "The label for category Plugin Development in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Connector Plugin": {
+    "message": "连接器",
+    "description": "The label for category Connector Plugin in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Metric Plugin": {
+    "message": "检查规则",
+    "description": "The label for category Metric Plugin in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Data Quality Metric": {
+    "message": "数据质量检查规则",
+    "description": "The label for category Data Quality Metric in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Data Quality Engine": {
+    "message": "数据质量检查引擎",
+    "description": "The label for category Data Quality Engine in sidebar tutorialSidebar"
   }
 }
