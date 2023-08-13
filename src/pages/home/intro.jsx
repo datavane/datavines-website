@@ -29,7 +29,7 @@ export default function () {
                 target="_blank">
                 <i className="lni-github-original"></i>&nbsp;GitHub
               </a>
-              <a className="btn datavines-btn btn-green mt-30 ml-3 ztop" href={baseUrl + "/docs/get-started/deploy-from-source"}
+              <a className="btn datavines-btn btn-green mt-30 ml-3 ztop" href={baseUrl + "/docs/02-02-get-started/deploy-from-source"}
                 style={{ marginLeft: '10px' }}>
                 <i className="lni-play"></i>&nbsp;Get started
               </a>

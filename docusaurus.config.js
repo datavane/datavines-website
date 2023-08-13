@@ -206,9 +206,9 @@ const config = {
   }),
 
   plugins: [
-    'docusaurus-plugin-less',
+    'docusaurus-04-04-plugin-less',
     [
-      '@docusaurus/plugin-content-docs',
+      '@docusaurus/04-04-plugin-content-docs',
       {
         id: 'community',
         path: 'community',
