@@ -1,7 +1,6 @@
 ---
 id: 'environment-preparation'
 title: '开发环境准备'
-sidebar_position: 2
 ---
 
 # Datavines 环境搭建指南

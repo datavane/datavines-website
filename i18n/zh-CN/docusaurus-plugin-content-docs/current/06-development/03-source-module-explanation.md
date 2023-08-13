@@ -1,7 +1,6 @@
 ---
 id: 'source-module-explanation'
 title: '源码模块解释'
-sidebar_position: 3
 ---
 
 # Datavines 代码架构解析

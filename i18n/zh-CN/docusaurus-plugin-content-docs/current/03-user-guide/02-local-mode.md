@@ -1,7 +1,6 @@
 ---
 id: 'local-mode'
 title: '本地运行模式'
-sidebar_position: 2
 ---
 
 ## 创建规则配置文件

@@ -1,7 +1,6 @@
 ---
 id: 'Error Data Storage'
 title: '错误数据存储'
-sidebar_position: 4
 ---
 错误数据存储引擎是用于存储数据质量检查中不符合规则的数据，便于用户可以查看有问题的数据来进行下一步的修复或者剔除操作
 - MySQL存储引擎

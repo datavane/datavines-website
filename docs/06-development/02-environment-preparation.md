@@ -1,7 +1,6 @@
 ---
 id: 'environment-preparation'
 title: 'Environment Preparation'
-sidebar_position: 2
 ---
 
 # Datavines Environmental Setup Guide

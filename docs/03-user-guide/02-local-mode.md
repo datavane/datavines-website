@@ -1,7 +1,6 @@
 ---
 id: 'local-mode'
 title: 'Local Mode'
-sidebar_position: 2
 ---
 
 ## Create config file
