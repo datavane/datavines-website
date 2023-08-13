@@ -206,7 +206,7 @@ const config = {
   }),
 
   plugins: [
-    'docusaurus-04-plugin-less',
+    'docusaurus-plugin-less',
     [
       '@docusaurus/04-plugin-content-docs',
       {
