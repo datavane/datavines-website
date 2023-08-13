@@ -6,19 +6,19 @@ sidebar_position: 1
 
 ## 环境准备
 
-在安装`DataVines`之前请确保你的服务器上已经安装下面软件
+在安装`Datavines`之前请确保你的服务器上已经安装下面软件
 - `Git`，确保 `git clone`的顺利执行
 - `JDK`，确保 `jdk = 8`
 - `Maven`, 确保项目的顺利打包（当然你也可以在本地打包以后上传至服务器）
 
 ## 下载代码
 ```shell
-git clone https://github.com/datavines-ops/datavines.git
+git clone https://github.com/datavane/datavines.git
 cd datavines
 ```
 
 ## 数据库准备
-`DataVines` 的元数据是存储在关系型数据库中，目前支持 `MySQL` 和 `PostgreSQL` ，默认使用 `PostgreSQL` ，下面以`MySQL`为例说明安装步骤：
+`Datavines` 的元数据是存储在关系型数据库中，目前支持 `MySQL` 和 `PostgreSQL` ，默认使用 `PostgreSQL` ，下面以`MySQL`为例说明安装步骤：
 - 创建数据库 `datavines`
 - 执行 `script/sql/datavines-mysql.sql` 脚本进行数据库的初始化
 
@@ -75,12 +75,12 @@ cd bin
 sh datavines-daemon.sh start mysql
 ```
 
-查看日志，如果日志里面没有报错信息，并且能看到`[INFO] 2022-04-10 12:29:05.447 io.datavines.server.DataVinesServer:[61] - Started DataVinesServer in 3.97 seconds (JVM running for 4.69)`的时候，证明服务已经成功启动
+查看日志，如果日志里面没有报错信息，并且能看到`[INFO] 2022-04-10 12:29:05.447 io.datavines.server.DatavinesServer:[61] - Started DatavinesServer in 3.97 seconds (JVM running for 4.69)`的时候，证明服务已经成功启动
 
 ### 访问前端页面
 在浏览器输入：localhost:5600，就会跳转至登录界面，输入账号密码 admin/123456
 
-![DataVines架构图](/doc/image/login.png)
+![Datavines架构图](/doc/image/login.png)
 
 
 

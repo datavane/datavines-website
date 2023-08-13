@@ -20,12 +20,12 @@ export default function () {
               <div className="mb-5 system_info pt-0">
                 <div className="project_title fw-bold text-white">
                   <div className="d-flex  align-items-start">
-			<p className="text-dark title">DataVines</p>
+			<p className="text-dark title">Datavines</p>
                   </div>
                 </div>
                 <p className="lead text-dark">{dataSource.slogan.description}</p>
               </div>
-              <a className="btn datavines-btn btn mt-30 ztop" href="https://github.com/datavines-ops/datavines"
+              <a className="btn datavines-btn btn mt-30 ztop" href="https://github.com/datavane/datavines"
                 target="_blank">
                 <i className="lni-github-original"></i>&nbsp;GitHub
               </a>
@@ -37,9 +37,9 @@ export default function () {
                 <a href="https://www.apache.org/licenses/LICENSE-2.0.html">
                   <img src="https://img.shields.io/badge/license-Apache%202-4EB1BA.svg" className="wow fadeInUp"></img>
                 </a>
-                <img src="https://img.shields.io/github/stars/datavines-ops/datavines.svg?sanitize=true" className="wow fadeInUp"></img>
-                <img src="https://img.shields.io/github/forks/datavines-ops/datavines.svg?sanitize=true" className="wow fadeInUp"></img>
-                <img src="https://img.shields.io/github/languages/count/datavines-ops/datavines" className="wow fadeInUp"></img>
+                <img src="https://img.shields.io/github/stars/datavane/datavines.svg?sanitize=true" className="wow fadeInUp"></img>
+                <img src="https://img.shields.io/github/forks/datavane/datavines.svg?sanitize=true" className="wow fadeInUp"></img>
+                <img src="https://img.shields.io/github/languages/count/datavane/datavines" className="wow fadeInUp"></img>
               </div>
             </div>
           </div>

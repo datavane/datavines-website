@@ -6,19 +6,19 @@ sidebar_position: 1
 
 ## Environment preparation
 
-Before installing `DataVines`, please make sure the following software is installed on your server
+Before installing `Datavines`, please make sure the following software is installed on your server
 - `Git` to ensure smooth execution of `git clone`
 - `JDK`, make sure `jdk = 8`
 - `Maven`, to ensure the smooth packaging of the project (of course, you can also upload it to the server after packaging locally)
 
 ## Download code
 ```shell
-git clone https://github.com/datavines-ops/datavines.git
+git clone https://github.com/datavane/datavines.git
 cd datavines
 ```
 
 ## Database preparation
-The metadata of `DataVines` is stored in a relational database. Currently, `MySQL` and `PostgreSQL` are supported, and `PostgreSQL` is used by default. The following uses `MySQL` as an example to illustrate the installation steps:
+The metadata of `Datavines` is stored in a relational database. Currently, `MySQL` and `PostgreSQL` are supported, and `PostgreSQL` is used by default. The following uses `MySQL` as an example to illustrate the installation steps:
 - Create database `datavines`
 - Execute the `script/sql/datavines-mysql.sql` script to initialize the database
 
@@ -79,13 +79,13 @@ cd bin
 sh datavines-daemon.sh start mysql
 ```
 
-Check the log, if there is no error message in the log, and you can see `[INFO] 2022-04-10 12:29:05.447 io.datavines.server.DataVinesServer:[61] - Started DataVinesServer in 3.97 seconds (JVM running for 4.69 )`, it proves that the service has been successfully started
+Check the log, if there is no error message in the log, and you can see `[INFO] 2022-04-10 12:29:05.447 io.datavines.server.DatavinesServer:[61] - Started DatavinesServer in 3.97 seconds (JVM running for 4.69 )`, it proves that the service has been successfully started
 
 ### Start exploring
 
 Enter `localhost:5600` in the browser, and you will see the login interface. Enter the username & password `admin / 123456`
 
-![DataVines架构图](/doc/image/login.png)
+![Datavines架构图](/doc/image/login.png)
 
 
 

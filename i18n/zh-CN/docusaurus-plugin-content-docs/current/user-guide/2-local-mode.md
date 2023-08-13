@@ -36,7 +36,7 @@ vi metric_job_config.json
         "metricParameter":{
           "table":"test_table",
           "column":"test_column",
-          "metric_database":"test"
+          "database":"test"
         },
 
         "expectedType":"fix_value",
