@@ -1,4 +1,0 @@
----
-id: 'Tag'
-title: 'Tag'
----
