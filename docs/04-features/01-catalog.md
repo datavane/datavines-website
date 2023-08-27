@@ -1,4 +1,0 @@
----
-id: 'Catalog'
-title: 'Catalog'
----

@@ -1,4 +1,4 @@
 ---
-id: 'DolphinScheduler'
+id: 'dolphin-scheduler'
 title: 'DolphinScheduler'
 ---

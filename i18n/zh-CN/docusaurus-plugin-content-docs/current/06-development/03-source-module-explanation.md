@@ -33,9 +33,6 @@ datavines-registry 是 datavines 中的注册中心。 datavines-registry-api �
 ## datavines-notification
 
 datavines-notification 是 datavines 中的通知通道管理。 datavines-notification-api 定义了通知通道的消息通知、配置参数等接口。datavines-notification-plugins 中内置了 email 类型的通知通道实现。
-## datavines-storage
-
-datavines-storage 是 datavines 中错误数据存储管理模块。 datavines-storage-api 定义了错误数据的查询、配置参数等接口。 datavienes-storage-plugins 中内置了MySQL和LocalFile 两种类型的错误数据存储引擎，用于数据质量检查过程发现的不符合规则的错误数据，LocalFile 引擎只适用于 Local 执行引擎。
 
 ## datavines-runner
 

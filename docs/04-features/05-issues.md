@@ -1,4 +1,0 @@
----
-id: 'Issues'
-title: 'Issues'
----

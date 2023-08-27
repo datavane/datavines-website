@@ -34,10 +34,6 @@ datavines-registry is the registry in datavines. datavines-registry-api defines 
 
 datavines-notification is the notification channel management in datavines. datavines-notification-api defines the notification channel's message notification, configuration parameters and other interfaces. The email type notification channel implementation is built into datavines-notification-plugins.
 
-## datavines-storage
-
-datavines-storage is an error data storage management module in datavines. datavines-storage-api defines interfaces such as error data query and configuration parameters. Two types of error data storage engines, MySQL and LocalFile, are built into datavienes-storage-plugins, which are used for error data that does not conform to the rules found during the data quality inspection process. The LocalFile engine is only applicable to the Local execution engine.
-
 ## datavines-runner
 
 datavines-runner is a module in datavines responsible for running data quality checks in script mode. Its main functions are to read configuration files, parse configuration files, perform data quality checks, judge check results, and run alarm processing.
