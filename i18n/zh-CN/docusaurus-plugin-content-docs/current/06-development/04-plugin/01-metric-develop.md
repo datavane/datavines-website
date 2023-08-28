@@ -191,7 +191,7 @@ public abstract class BaseSingleTableColumn extends BaseSingleTable {
 在 datavines-metric-plugins 下创建一个新规则的 module
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/96646c5e91f44741a17457b0092a4ba3.jpeg#pic_center)
+![plugin_develop_metric_module](/doc/image/plugin_develop_metric_module.png)
 
 在 pom.xml 中添加
 ```
