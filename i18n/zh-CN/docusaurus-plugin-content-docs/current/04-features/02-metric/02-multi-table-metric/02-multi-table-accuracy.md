@@ -1,4 +1,4 @@
 ---
 id: 'multi-table-accuracy'
-title: 'multi_table_accuracy'
+title: '跨表准确性'
 ---
