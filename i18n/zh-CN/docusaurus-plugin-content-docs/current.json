@@ -47,6 +47,10 @@
     "message": "数据目录",
     "description": "The label for category Catalog in sidebar tutorialSidebar"
   },
+  "sidebar.tutorialSidebar.category.Catalog Connector": {
+    "message": "连接器",
+    "description": "The label for category Catalog Connector in sidebar tutorialSidebar"
+  },
   "sidebar.tutorialSidebar.category.Single Table Metric": {
     "message": "单表检查规则",
     "description": "The label for category Single Table Metric in sidebar tutorialSidebar"
