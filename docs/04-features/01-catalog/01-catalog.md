@@ -1,4 +1,4 @@
 ---
-id: 'catalog'
-title: 'Catalog'
+id: 'catalog-intro'
+title: 'Catalog Introduction'
 ---
