@@ -29,7 +29,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'image/favicon.ico',
   i18n: {
-    defaultLocale: "en",
+    defaultLocale: "zh-CN",
     locales: ["en", "zh-CN"],
     localeConfigs: {
       'zh-CN': {
@@ -40,8 +40,7 @@ const config = {
         label: "English",
         direction: 'ltr',
       }
-
-    },
+    }
   },
   themes: [
     [
