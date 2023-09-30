@@ -32,11 +32,11 @@ const config = {
     defaultLocale: "en",
     locales: ["en", "zh-CN"],
     localeConfigs: {
-      zh-CN: {
+      'zh-CN': {
         label: "简体中文",
         direction: 'ltr',
       },
-      en: {
+      'en': {
         label: "English",
         direction: 'ltr',
       }
