@@ -32,14 +32,15 @@ const config = {
     defaultLocale: "zh-CN",
     locales: ["en", "zh-CN"],
     localeConfigs: {
-      en: {
-        label: "English",
-        direction: 'ltr',
-      },
-      'zh-CN': {
+      zh-CN: {
         label: "简体中文",
         direction: 'ltr',
       },
+      en: {
+        label: "English",
+        direction: 'ltr',
+      }
+
     },
   },
   themes: [
@@ -53,7 +54,7 @@ const config = {
         indexPages: true,
         highlightSearchTermsOnTargetPage: false, // Highlight search terms on target page.
         explicitSearchResultPath: true,
-        language: ["zh", "en"]
+        language: ["zh-CN", "en"]
       }),
     ],
   ],
