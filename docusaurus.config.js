@@ -40,8 +40,7 @@ const config = {
         label: "English",
         direction: 'ltr',
       }
-
-    },
+    }
   },
   themes: [
     [
