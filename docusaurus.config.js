@@ -54,7 +54,7 @@ const config = {
         indexPages: true,
         highlightSearchTermsOnTargetPage: false, // Highlight search terms on target page.
         explicitSearchResultPath: true,
-        language: ["zh-CN", "en"]
+        language: ["zh", "en"]
       }),
     ],
   ],
