@@ -29,7 +29,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'image/favicon.ico',
   i18n: {
-    defaultLocale: "zh-CN",
+    defaultLocale: "en",
     locales: ["en", "zh-CN"],
     localeConfigs: {
       en: {
@@ -39,8 +39,8 @@ const config = {
       'zh-CN': {
         label: "简体中文",
         direction: 'ltr',
-      }
-    }
+      },
+    },
   },
   themes: [
     [
@@ -53,7 +53,7 @@ const config = {
         indexPages: true,
         highlightSearchTermsOnTargetPage: false, // Highlight search terms on target page.
         explicitSearchResultPath: true,
-        language: ["zh-CN", "en"]
+        language: ["zh", "en"]
       }),
     ],
   ],
