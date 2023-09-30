@@ -32,14 +32,14 @@ const config = {
     defaultLocale: "en",
     locales: ["en", "zh-CN"],
     localeConfigs: {
+      en: {
+        label: "English",
+        direction: 'ltr',
+      },
       'zh-CN': {
         label: "简体中文",
         direction: 'ltr',
       },
-      'en': {
-        label: "English",
-        direction: 'ltr',
-      }
     }
   },
   themes: [
