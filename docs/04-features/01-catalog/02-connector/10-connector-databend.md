@@ -1,11 +1,11 @@
 ---
-id: 'connector-impala'
-title: 'Impala'
+id: 'connector-databend'
+title: 'Databend'
 ---
 
 ## 介绍
 
-`Presto` 连接器用于与 `Presto` 类型的数据源建立连接，获取元数据和执行数据质量检查。
+`Databend` 连接器用于与 `Databend` 类型的数据源建立连接，获取元数据和执行数据质量检查。
 
 ## 参数
 ### Options

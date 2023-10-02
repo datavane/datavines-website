@@ -7,8 +7,6 @@ title: '非空检查'
 - 进入作业页面选择 非空检查 规则
 - 选择要检查的数据源信息
 
-![自定义聚合SQL规则](/doc/image/metric_column_not_null.png)
-
 ## 参数介绍
 ### Options
 
@@ -35,6 +33,21 @@ title: '非空检查'
         "column": "type"
     }
 }
+```
+
+### 检查过程中自动生成的 `SQL` 语句
+
+检查过程会用到的一些自动生成的参数，用于区分各个检查规则。
+- uniqueKey：会根据每个规则的配置信息生成一个唯一键值
+- invalidate_items_table：会创建一个视图用于存储中间表数据，中间表数据一般为命中规则的数据，即为错误数据，该视图的名字生成规则为 invalidate_items_${uniqueKey}
+
+中间表 invalidate_items_uniqueKey
+```
+select * from ${table} where  ${column} is not null and ${filter}
+```
+计算实际值的 `SQL` 
+```
+select count(1) as actual_value_"+ uniqueKey +" from ${invalidate_items_table}
 ```
 
 ## 使用案例
