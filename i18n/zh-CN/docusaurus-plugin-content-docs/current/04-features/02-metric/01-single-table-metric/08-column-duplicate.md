@@ -1,10 +1,10 @@
 ---
-id: 'column-not-null'
-title: '非空检查'
+id: 'column-duplicate'
+title: 'column_duplicate'
 ---
 ## 使用方法
 - 点击创建规则作业，选择数据质量作业
-- 进入作业页面选择 非空检查 规则
+- 进入作业页面选择 重复值检查 规则
 - 选择要检查的数据源信息
 
 ## 参数介绍
@@ -26,7 +26,7 @@ title: '非空检查'
 ### 配置文件例子
 ```
 {
-    "metricType": "column_not_null",
+    "metricType": "column_duplicate",
     "metricParameter": {
         "database": "datavines",
         "table": "dv_catalog_entity_instance",
@@ -43,9 +43,9 @@ title: '非空检查'
 
 中间表 invalidate_items_uniqueKey
 ```
-select * from ${table} where  ${column} is not null and ${filter}
+select ${column} from ${table} where ${filter} group by ${column} having count(${column}) > 1
 ```
-计算实际值的 `SQL` 
+计算实际值的 `SQL`，输出的实际值是 `重复值>1` 的列的行数
 ```
 select count(1) as actual_value_"+ uniqueKey +" from ${invalidate_items_table}
 ```

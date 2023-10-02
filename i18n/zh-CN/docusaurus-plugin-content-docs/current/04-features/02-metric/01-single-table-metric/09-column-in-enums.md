@@ -1,10 +1,10 @@
 ---
-id: 'column-not-null'
-title: '非空检查'
+id: 'column-in-enums'
+title: 'column_in_enums'
 ---
 ## 使用方法
 - 点击创建规则作业，选择数据质量作业
-- 进入作业页面选择 非空检查 规则
+- 进入作业页面选择 枚举值检查 规则
 - 选择要检查的数据源信息
 
 ## 参数介绍
@@ -15,6 +15,7 @@ title: '非空检查'
 | [database](#database-string) | string |    yes     |       -       |
 |    [table](#table-string)    | string |    yes     |       -       |
 |   [column](#column-string)   | string |    yes     |       -       |
+|   [enum_list](#enum_list-string)   | string |    yes     |       -       |
 
 #### database [string]
 源表数据库名
@@ -22,15 +23,18 @@ title: '非空检查'
 源表数据库中的表名
 #### column [string]
 要检查的列
+#### enum_list [string]
+枚举值列表，用,隔开
 
 ### 配置文件例子
 ```
 {
-    "metricType": "column_not_null",
+    "metricType": "column_in_enums",
     "metricParameter": {
         "database": "datavines",
         "table": "dv_catalog_entity_instance",
         "column": "type"
+        "enum_list":"'database','table'"
     }
 }
 ```
@@ -43,9 +47,9 @@ title: '非空检查'
 
 中间表 invalidate_items_uniqueKey
 ```
-select * from ${table} where  ${column} is not null and ${filter}
+select * from ${table} where (${column} in (${enum_list})) and ${filter}
 ```
-计算实际值的 `SQL` 
+计算实际值的 `SQL`，输出的实际值是列的值在枚举值列表中的列的行数
 ```
 select count(1) as actual_value_"+ uniqueKey +" from ${invalidate_items_table}
 ```
