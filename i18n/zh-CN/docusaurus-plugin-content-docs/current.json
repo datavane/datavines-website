@@ -58,5 +58,13 @@
   "sidebar.tutorialSidebar.category.Multi Table Metric": {
     "message": "多表检查规则",
     "description": "The label for category Multi Table Metric in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Expected Value": {
+    "message": "期望值类型",
+    "description": "The label for category Single Table Metric in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Result Validate Formula": {
+    "message": "结果比对公式",
+    "description": "The label for category Multi Table Metric in sidebar tutorialSidebar"
   }
 }
