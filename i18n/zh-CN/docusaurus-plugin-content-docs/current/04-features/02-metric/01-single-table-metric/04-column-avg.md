@@ -1,6 +1,6 @@
 ---
 id: 'column-avg'
-title: 'column_avg'
+title: '平均值检查'
 ---
 ## 使用方法
 - 点击创建规则作业，选择数据质量作业

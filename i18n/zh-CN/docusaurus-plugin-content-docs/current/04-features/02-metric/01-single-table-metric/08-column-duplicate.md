@@ -1,6 +1,6 @@
 ---
 id: 'column-duplicate'
-title: 'column_duplicate'
+title: '重复值检查'
 ---
 ## 使用方法
 - 点击创建规则作业，选择数据质量作业
