@@ -1,6 +1,6 @@
 ---
 id: 'column-in-enums'
-title: 'column_in_enums'
+title: '枚举值检查'
 ---
 ## 使用方法
 - 点击创建规则作业，选择数据质量作业

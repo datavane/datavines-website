@@ -1,6 +1,6 @@
 ---
 id: 'column-null'
-title: 'column_null'
+title: '空值检查'
 ---
 ## 使用方法
 - 点击创建规则作业，选择数据质量作业

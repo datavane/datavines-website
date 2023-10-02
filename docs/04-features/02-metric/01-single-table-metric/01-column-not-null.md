@@ -1,6 +1,6 @@
 ---
 id: 'column-not-null'
-title: '非空检查'
+title: 'column_not_null'
 ---
 ## 使用方法
 - 点击创建规则作业，选择数据质量作业

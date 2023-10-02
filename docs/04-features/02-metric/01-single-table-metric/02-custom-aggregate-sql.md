@@ -1,6 +1,6 @@
 ---
 id: 'custom-aggregate-sql'
-title: '自定义聚合SQL'
+title: 'custom_aggregate_sql'
 ---
 
 ## 使用方法
