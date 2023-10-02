@@ -1,10 +1,10 @@
 ---
-id: 'column-duplicate'
-title: 'column_duplicate'
+id: 'column-freshness'
+title: '及时性检查'
 ---
 ## 使用方法
 - 点击创建规则作业，选择数据质量作业
-- 进入作业页面选择 重复值检查 规则
+- 进入作业页面选择 及时性检查 规则
 - 选择要检查的数据源信息
 
 ## 参数介绍
@@ -15,6 +15,9 @@ title: 'column_duplicate'
 | [database](#database-string) | string |    yes     |       -       |
 |    [table](#table-string)    | string |    yes     |       -       |
 |   [column](#column-string)   | string |    yes     |       -       |
+|   [begin_time](#begin_time-string)   | string |    yes     |       -       |
+|   [deadline_time](#deadline_time-string)   | string |    yes     |       -       |
+|   [datetime_format](#datetime_format-string)   | string |    yes     |       -       |
 
 #### database [string]
 源表数据库名
@@ -22,15 +25,23 @@ title: 'column_duplicate'
 源表数据库中的表名
 #### column [string]
 要检查的列
+#### begin_time [string]
+开始时间
+#### deadline_time [string]
+结束时间
+#### datetime_format [string]
+日期格式
 
 ### 配置文件例子
 ```
 {
-    "metricType": "column_duplicate",
+    "metricType": "column_avg",
     "metricParameter": {
         "database": "datavines",
         "table": "dv_catalog_entity_instance",
-        "column": "type"
+        "column": "type",
+        "min":"0",
+        "max":"10"
     }
 }
 ```
@@ -45,13 +56,12 @@ title: 'column_duplicate'
 
 中间表 invalidate_items_${uniqueKey}
 ```
-select ${column} from ${table} where ${filter} group by ${column} having count(${column}) > 1
+select ${column} from ${table} where (DATE_FORMAT(${column}, '${datetime_format}') <= DATE_FORMAT('${deadline_time}', '${datetime_format}') ) AND (DATE_FORMAT(${column}, '${datetime_format}') >= DATE_FORMAT('${begin_time}', '${datetime_format}')) and ${filter}
 ```
-计算实际值的 `SQL`，输出的实际值是 `重复值>1` 的列的行数
+计算实际值的 `SQL`，输出的实际值是 `列值在时间范围内` 的列的行数
 ```
 select count(1) as actual_value_"+ uniqueKey +" from ${invalidate_items_table}
 ```
-
 ## 使用案例
 
 ### 场景

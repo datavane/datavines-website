@@ -1,10 +1,10 @@
 ---
-id: 'column-distinct'
-title: 'Distinct检查'
+id: 'column-sum'
+title: 'column_sum'
 ---
 ## 使用方法
 - 点击创建规则作业，选择数据质量作业
-- 进入作业页面选择 Distinct检查 规则
+- 进入作业页面选择 总值检查 规则
 - 选择要检查的数据源信息
 
 ## 参数介绍
@@ -26,7 +26,7 @@ title: 'Distinct检查'
 ### 配置文件例子
 ```
 {
-    "metricType": "column_distinct",
+    "metricType": "column_avg",
     "metricParameter": {
         "database": "datavines",
         "table": "dv_catalog_entity_instance",
@@ -41,9 +41,9 @@ title: 'Distinct检查'
 - uniqueKey
     - 会根据每个规则的配置信息生成一个唯一键值
 
-计算实际值的 `SQL`， 输出不重复的行数
+计算实际值的 `SQL` 
 ```
-select count(distinct(${column})) as actual_value_${uniqueKey} from ${table} where ${filter}
+select sum(${column}) as actual_value_${uniqueKey} from ${table} where ${filter}
 ```
 
 ## 使用案例
