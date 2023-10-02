@@ -38,10 +38,12 @@ title: 'column_null'
 ### 检查过程中自动生成的 `SQL` 语句
 
 检查过程会用到的一些自动生成的参数，用于区分各个检查规则。
-- uniqueKey：会根据每个规则的配置信息生成一个唯一键值
-- invalidate_items_table：会创建一个视图用于存储中间表数据，中间表数据一般为命中规则的数据，即为错误数据，该视图的名字生成规则为 invalidate_items_${uniqueKey}
+- uniqueKey
+    - 会根据每个规则的配置信息生成一个唯一键值
+- invalidate_items_table
+    - 会创建一个视图用于存储中间表数据，中间表数据一般为命中规则的数据，即为错误数据，该视图的名字生成规则为 invalidate_items_${uniqueKey}
 
-中间表 invalidate_items_uniqueKey
+中间表 invalidate_items_${uniqueKey}
 ```
 select * from ${table} where ${column} is null and ${filter}
 ```
