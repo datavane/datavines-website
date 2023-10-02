@@ -16,8 +16,22 @@ title: 'Spark 引擎'
 - 如果想要使用 `Spark` 引擎，那么需要把 `Datavines` 部署在能执行 `spark-submit` 的服务器上
 - 需要配置可以执行 `spark-submit` 的服务器用户 和 环境配置
     - 服务器用户指的是 `root`、`hadoop`、`ods`等等这些服务器创建的用户
-    - 环境配置指的是 在服务器上 export 的各种配置
+    - 环境配置指的是 在服务器上 export 的各种配置，比如下面的SPARK_HOME2
     ```
     export SPARK_HOME2=/usr/hdp/2.6.3.0-235/spark-2.4.8-bin-hadoop2.7
     ```
     ![数据质量检查规则环境配置](/doc/image/metric_job_env.png)
+- 需要在全局配置那里进行yarn配置的修改
+    - standalone 模式
+    ```
+    yarn.mode=standalone
+    yarn.application.status.address=http://%s:%s/ws/v1/cluster/apps/%s #第一个%s需要被替换成yarn的ip地址
+    yarn.resource.manager.http.address.port=8088
+    ```
+    - ha 模式
+    ```
+    yarn.mode=ha
+    yarn.application.status.address=http://%s:%s/ws/v1/cluster/apps/%s
+    yarn.resource.manager.http.address.port=8088
+    yarn.resource.manager.ha.ids=192.168.0.1,192.168.0.2
+    ```
