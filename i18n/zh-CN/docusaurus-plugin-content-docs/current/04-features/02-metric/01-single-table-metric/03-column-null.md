@@ -41,15 +41,15 @@ title: '空值检查'
 - uniqueKey
     - 会根据每个规则的配置信息生成一个唯一键值
 - invalidate_items_table
-    - 会创建一个视图用于存储中间表数据，中间表数据一般为命中规则的数据，即为错误数据，该视图的名字生成规则为 invalidate_items_${uniqueKey}
+    - 会创建一个视图用于存储中间表数据，中间表数据一般为命中规则的数据，即为错误数据，该视图的名字生成规则为 invalidate_items_uniqueKey
 
-中间表 invalidate_items_${uniqueKey}
+中间表 invalidate_items_uniqueKey
 ```
 select * from ${table} where ${column} is null and ${filter}
 ```
 计算实际值的 `SQL` 
 ```
-select count(1) as actual_value_"+ uniqueKey +" from ${invalidate_items_table}
+select count(1) as actual_value_" + uniqueKey + " from ${invalidate_items_table}
 ```
 
 ## 使用案例
