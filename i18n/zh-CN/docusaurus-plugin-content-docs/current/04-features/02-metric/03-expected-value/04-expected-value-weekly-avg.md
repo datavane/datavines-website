@@ -1,6 +1,6 @@
 ---
 id: 'expected-value-weekly-avg'
-title: '期望值-周均值'
+title: '周均值'
 ---
 
 ## 概念解释
@@ -32,14 +32,3 @@ where data_time >= date_sub(date_format(${data_time},'yyyy-MM-dd'), (7- datediff
       and data_time < date_add(date_format(${data_time}, 'yyyy-MM-dd'),1) 
       and unique_code = ${unique_code}
 ``` 
-
-## 使用案例
-
-### 场景
-...
-
-### 思路
-...
-
-### 步骤
-...

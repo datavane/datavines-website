@@ -5,7 +5,7 @@ title: 'PostgreSQL'
 
 ## 介绍
 
-`MySQL` 连接器用于与 `MySQL` 类型的数据源建立连接，获取元数据和执行数据质量检查。
+`PostgreSQL` 连接器用于与 `PostgreSQL` 类型的数据源建立连接，获取元数据和执行数据质量检查。
 
 ## 参数
 ### Options

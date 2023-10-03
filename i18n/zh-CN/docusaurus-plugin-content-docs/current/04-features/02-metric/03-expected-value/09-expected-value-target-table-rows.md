@@ -1,6 +1,6 @@
 ---
 id: 'expected-value-target-table-rows'
-title: '期望值-目标表总行数'
+title: '目标表总行数'
 ---
 
 ## 概念解释
@@ -18,14 +18,3 @@ title: '期望值-目标表总行数'
 ```
 select count(1) as expected_value_${uniqueKey} from ${target_table}
 ``` 
-
-## 使用案例
-
-### 场景
-...
-
-### 思路
-...
-
-### 步骤
-...

@@ -1,6 +1,6 @@
 ---
 id: 'formula-intro'
-title: '比对公式介绍'
+title: 公式介绍'
 ---
 
 ## 概念解释

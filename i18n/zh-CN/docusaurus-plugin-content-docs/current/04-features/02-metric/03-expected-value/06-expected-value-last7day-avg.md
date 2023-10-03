@@ -1,6 +1,6 @@
 ---
 id: 'expected-value-last7day-avg'
-title: '期望值-最近7天均值'
+title: '最近7天均值'
 ---
 
 ## 概念解释
@@ -30,14 +30,3 @@ from dv_actual_values
 where data_time >= date_add(date_format(${data_time}, 'yyyy-MM-dd'),-7)
       and data_time < date_add(date_format(${data_time}, 'yyyy-MM-dd'),1) and unique_code = ${unique_code}
 ``` 
-
-## 使用案例
-
-### 场景
-...
-
-### 思路
-...
-
-### 步骤
-...
