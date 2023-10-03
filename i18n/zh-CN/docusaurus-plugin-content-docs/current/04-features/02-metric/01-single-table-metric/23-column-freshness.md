@@ -12,8 +12,8 @@ title: '及时性检查'
 
 |             name             |  type  |  required  | default value |
 |:----------------------------:|:------:|:----------:|:-------------:|
-| [database](#database-string) | string |    yes     |       -       |
-|    [table](#table-string)    | string |    yes     |       -       |
+|   [database](#database-string) | string |    yes     |       -       |
+|   [table](#table-string)    | string |    yes     |       -       |
 |   [column](#column-string)   | string |    yes     |       -       |
 |   [begin_time](#begin_time-string)   | string |    yes     |       -       |
 |   [deadline_time](#deadline_time-string)   | string |    yes     |       -       |
@@ -39,9 +39,10 @@ title: '及时性检查'
     "metricParameter": {
         "database": "datavines",
         "table": "dv_catalog_entity_instance",
-        "column": "type",
-        "min":"0",
-        "max":"10"
+        "column": "update_time",
+        "begin_time":"2023-10-01 08:00:00",
+        "deadline_time":"2023-10-01 09:00:00",
+        "datetime_format":"yyyy-MM-dd HH:mm:ss"
     }
 }
 ```
@@ -52,9 +53,9 @@ title: '及时性检查'
 - uniqueKey
     - 会根据每个规则的配置信息生成一个唯一键值
 - invalidate_items_table
-    - 会创建一个视图用于存储中间表数据，中间表数据一般为命中规则的数据，即为错误数据，该视图的名字生成规则为 invalidate_items_${uniqueKey}
+    - 会创建一个视图用于存储中间表数据，中间表数据一般为命中规则的数据，即为错误数据，该视图的名字生成规则为 invalidate_items_uniqueKey
 
-中间表 invalidate_items_${uniqueKey}
+中间表 invalidate_items_uniqueKey
 ```
 select ${column} from ${table} where (DATE_FORMAT(${column}, '${datetime_format}') <= DATE_FORMAT('${deadline_time}', '${datetime_format}') ) AND (DATE_FORMAT(${column}, '${datetime_format}') >= DATE_FORMAT('${begin_time}', '${datetime_format}')) and ${filter}
 ```
