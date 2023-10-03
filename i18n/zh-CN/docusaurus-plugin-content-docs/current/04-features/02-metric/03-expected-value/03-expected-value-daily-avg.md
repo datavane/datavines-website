@@ -1,6 +1,6 @@
 ---
 id: 'expected-value-daily-avg'
-title: '期望值-日均值'
+title: '日均值'
 ---
 
 ## 概念解释
@@ -32,14 +32,3 @@ where data_time >=date_format(${data_time}, 'yyyy-MM-dd')
       and data_time < date_add(date_format(${data_time}, 'yyyy-MM-dd'),1) 
       and unique_code = ${unique_code}
 ``` 
-
-## 使用案例
-
-### 场景
-...
-
-### 思路
-...
-
-### 步骤
-...

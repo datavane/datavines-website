@@ -1,6 +1,6 @@
 ---
 id: 'expected-value-monthly-avg'
-title: '期望值-月均值'
+title: '月均值'
 ---
 
 ## 概念解释
@@ -31,14 +31,3 @@ where data_time >= date_format(${data_time}, 'yyyy-MM-01')
       and data_time < date_add(date_format(${data_time}, 'yyyy-MM-dd'),1) 
       and unique_code = ${unique_code}
 ``` 
-
-## 使用案例
-
-### 场景
-...
-
-### 思路
-...
-
-### 步骤
-...

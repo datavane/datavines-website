@@ -1,6 +1,6 @@
 ---
 id: 'formula-count'
-title: '比对公式-实际值'
+title: '实际值'
 ---
 
 ## 概念解释

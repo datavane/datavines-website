@@ -1,6 +1,6 @@
 ---
 id: 'formula-percentage'
-title: '比对公式-实际值/期望值*100%'
+title: '实际值/期望值*100%'
 ---
 
 ## 概念解释
