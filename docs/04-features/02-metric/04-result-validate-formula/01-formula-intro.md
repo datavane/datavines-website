@@ -1,4 +1,4 @@
 ---
 id: 'formula-intro'
-title: 'formula-intro'
+title: 'Formula Intro'
 ---

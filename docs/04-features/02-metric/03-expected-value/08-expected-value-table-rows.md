@@ -1,4 +1,4 @@
 ---
 id: 'expected-value-table-rows'
-title: 'table-rows'
+title: 'table_rows'
 ---

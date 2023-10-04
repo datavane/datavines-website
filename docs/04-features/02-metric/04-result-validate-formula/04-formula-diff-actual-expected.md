@@ -1,4 +1,4 @@
 ---
 id: 'formula-diff-actual-expected'
-title: 'formula-diff-actual-expected'
+title: 'diff_actual_expected'
 ---

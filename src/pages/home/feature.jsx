@@ -4,7 +4,7 @@ import config from './languages.json'
 
 export default function () {
   const isBrowser = useIsBrowser();
-  const language = isBrowser && location.pathname.indexOf('/datavines-website/zh-CN/') === 0 ? 'zh-CN' : 'en'
+  const language = isBrowser && location.pathname.indexOf('/datavines-website/en/') === 0 ? 'en' : 'zh-CN'
   const dataSource = config?.[language];
   return (
     <div className="section bg-light">
