@@ -64,3 +64,14 @@ Datavines 的元数据存储在关系型数据库中，目前支持的关系型�
  - `-Dlogging.config=classpath:server-logback.xml` 
  
 当你在Console里面看到 `[INFO] 2022-04-10 12:29:05.447 io.datavines.server.DatavinesServer:[61] - Started DatavinesServer in 3.97 seconds (JVM running for 4.69)` 日志的时候，证明服务已经启动成功了
+
+## 启动前端服务
+
+- 前置条件：本地安装好 node(v16.9.0) 和 npm(8.19.3)
+- 依次执行以下命令，即可完成本地前端服务的启动以进行本地调试。
+```
+cd datavines\ui
+npm install
+npm fund
+npm run dev:prod
+```

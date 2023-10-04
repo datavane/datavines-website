@@ -1,4 +1,4 @@
 ---
 id: 'formula-percentage'
-title: 'formula-percentage'
+title: 'percentage'
 ---

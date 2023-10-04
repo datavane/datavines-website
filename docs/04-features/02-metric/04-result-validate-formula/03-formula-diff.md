@@ -1,4 +1,4 @@
 ---
 id: 'formula-diff'
-title: 'formula-diff'
+title: 'diff'
 ---

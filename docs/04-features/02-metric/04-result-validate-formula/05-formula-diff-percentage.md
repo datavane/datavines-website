@@ -1,4 +1,4 @@
 ---
 id: 'formula-diff-percentage'
-title: 'formula-diff-percentage'
+title: 'diff_percentage'
 ---

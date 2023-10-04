@@ -7,8 +7,8 @@ import StartUp from "../../../static/home/dashboard.svg"
 
 export default function () {
   const isBrowser = useIsBrowser();
-  const language = isBrowser && location.pathname.indexOf('/datavines-website/zh-CN/') === 0 ? 'zh-CN' : 'en';
-  const baseUrl = isBrowser && location.pathname.indexOf('/datavines-website/zh-CN/') === 0 ? '/datavines-website/zh-CN' : '/datavines-website';
+  const language = isBrowser && location.pathname.indexOf('/datavines-website/en/') === 0 ? 'en' : 'zh-CN';
+  const baseUrl = isBrowser && location.pathname.indexOf('/datavines-website/en/') === 0 ? '/datavines-website/en' : '/datavines-website';
   const dataSource = config?.[language];
 
   return (

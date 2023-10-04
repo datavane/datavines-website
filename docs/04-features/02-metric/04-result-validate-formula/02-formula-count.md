@@ -1,4 +1,4 @@
 ---
 id: 'formula-count'
-title: 'formula-count'
+title: 'count'
 ---
