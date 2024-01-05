@@ -7,6 +7,10 @@
     "message": "入门指南",
     "description": "The label for category Get Started in sidebar tutorialSidebar"
   },
+  "sidebar.tutorialSidebar.category.Docker Deploy": {
+    "message": "Docker部署",
+    "description": "The label for category Docker Deploy in sidebar tutorialSidebar"
+  },
   "sidebar.tutorialSidebar.category.Integration": {
     "message": "集成",
     "description": "The label for category Integration in sidebar tutorialSidebar"
