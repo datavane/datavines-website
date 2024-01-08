@@ -8,7 +8,7 @@ This document mainly introduces how to use Dockerfile to create a running image 
 ## Prepare Dockerfile
 The following points should be noted when writing Dockerfile:
 >1. The basic parent image uses the official OpenJDK image certified by Docker Hub, with JDK version 1.8 used.
->2. The binary packages required for the application need to be packaged by oneself. Please refer to the [Deploy with Source Code] (/docs/02-get-started/01-build-from-source/03-package) 。
+>2. The binary packages required for the application need to be packaged by oneself. Please refer to the [Deploy with Source Code](../01-deploy-from-source.md)
 >3. When starting an application within Docker, use `start_container` parameter
 >4. The construction platform should be consistent with the operation platform.
 
