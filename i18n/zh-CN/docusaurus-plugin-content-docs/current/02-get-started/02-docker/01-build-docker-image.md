@@ -9,7 +9,7 @@ title: '构建Docker镜像'
 ## 准备 Dockerfile
 Dockerfile编写需注意以下几点：
 >1. 基础父镜像选用经过 Docker-Hub 认证的 OpenJDK 官方镜像，版本用 JDK 1.8 版本。
->2. 应用所需二进制包需自行打包,参考 [用源码部署](/docs/02-get-started/01-build-from-source/03-package) 章节。
+>2. 应用所需二进制包需自行打包,参考 [用源码部署](../01-deploy-from-source.md) 章节。
 >3. 应用在Docker内启动时应使用 `start_container` 参数
 >4. 构建平台应与运行平台保持一致。
 
