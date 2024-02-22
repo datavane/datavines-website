@@ -263,6 +263,14 @@ public class ColumnInEnums extends BaseSingleTableColumn {
 - 在 resources 目录下创建`META-INF/plugins`目录。
 - 在 plugins 目录下创建文件并且命名为`io.datavines.metric.api.SqlMetric`。
 - 在文件中添加`column_in_enums=io.datavines.metric.plugin.ColumnInEnums`。
+- 在datavines-metric-all模块下的pom.xml文件中添加新建的插件模块的依赖。
+```
+<dependency>
+    <groupId>io.datavines</groupId>
+    <artifactId>datavines-metric-column-in-enums</artifactId>
+    <version>${project.version}</version>
+</dependency>
+```
 
 ### 第四步
 打包成`jar`放到 datavines 目录下的`libs`目录下，重启服务即可。
