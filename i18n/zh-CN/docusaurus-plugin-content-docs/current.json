@@ -47,6 +47,14 @@
     "message": "执行引擎",
     "description": "The label for category Data Quality Engine in sidebar tutorialSidebar"
   },
+  "sidebar.tutorialSidebar.category.Slas": {
+    "message": "SLAs",
+    "description": "The label for category Data Quality Slas in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.SLAs Notifications": {
+    "message": "SLAs 通知",
+    "description": "The label for category Data Quality Slas Notifications in sidebar tutorialSidebar"
+  },
   "sidebar.tutorialSidebar.category.Catalog": {
     "message": "数据目录",
     "description": "The label for category Catalog in sidebar tutorialSidebar"

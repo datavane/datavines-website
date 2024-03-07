@@ -34,6 +34,21 @@ cd datavines-dist/target
 tar -zxvf datavines-1.0.0-SNAPSHOT-bin.tar.gz
 ```
 
+> 注意: 此时如果前端 `datavines-ui` 打包异常, 可能是网络问题, 可以尝试更换 npm 源
+找到 `datavines-ui` 项目的 pom 文件, 在 `npm install`  添加 `--registry https://registry.npmmirror.com`, 如下所示
+```xml
+<execution>
+    <id>npm install</id>
+    <goals>
+        <goal>npm</goal>
+    </goals>
+    <phase>generate-resources</phase>
+    <configuration>
+        <arguments>install --registry https://registry.npmmirror.com</arguments>
+    </configuration>
+</execution>
+```
+
 解压完成以后进入目录
 ```
 cd datavines-1.0.0-SNAPSHOT-bin
@@ -46,11 +61,14 @@ vi application.yaml
 主要是修改数据库信息
 ```
 spring:
- datasource:
-   driver-class-name: com.mysql.cj.jdbc.Driver
-   url: jdbc:mysql://127.0.0.1:3306/datavines?useUnicode=true&characterEncoding=UTF-8
-   username: root
-   password: 123456
+  config:
+    activate:
+      on-profile: mysql
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/datavines?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
 ```
 如果你是使用Spark做为执行引擎，并且是提交到Yarn上面去执行的，那么需要在common.properties中配置yarn相关的信息
 - standalone 模式
@@ -75,6 +93,22 @@ sh datavines-daemon.sh start mysql
 ```
 
 查看日志，如果日志里面没有报错信息，并且能看到`[INFO] 2022-04-10 12:29:05.447 io.datavines.server.DatavinesServer:[61] - Started DatavinesServer in 3.97 seconds (JVM running for 4.69)`的时候，证明服务已经成功启动
+
+### windows 打包问题
+如果项目是 在 windows 中打包的 执行 `sh datavines-daemon.sh start mysql` 时可能会报以下异常
+![windows打包问题](/doc/image/windows_package_script_error.png)
+这是因为 Windows格式文件的换行符为\r\n , 而Unix&Linux文件的换行符为\n
+此时需要执行 `dos2unix` 来转换文件格式
+安装 dos2unix
+```shell
+yum install -y dos2unix
+```
+格式转换
+```shell
+cd bin
+find . -type f -print0 | xargs -0 dos2unix
+```
+
 
 ### 访问前端页面
 在浏览器输入：localhost:5600，就会跳转至登录界面，输入账号密码 admin/123456
