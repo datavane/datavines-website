@@ -1,9 +1,9 @@
 ---
 id: 'dolphin-scheduler'
-title: 'DolphinScheduler'
+title: ' DolphinScheduler 中集成 Datavines'
 ---
 
-## DolphinScheduler 集成 Datavines 步骤
+## 集成步骤
 
 ### 第一步：申请令牌
 在 Datavines 中申请令牌，这个令牌是调用 Datavines OpenApi 时用的，步骤如下：
@@ -42,8 +42,8 @@ job_execution_result_url="${datavines_address}/api/v1/openapi/job/execution/resu
 repsonse_job_execute=$(curl -s -X POST "$job_execute_url/${job_id}" -H "Authorization: Bearer ${token}")
 
 if [ -z "$repsonse_job_execute" ]; then
-echo "[DATAVINES][ERROR]: job execute response is null"
-exit 1
+  echo "[DATAVINES][ERROR]: job execute response is null"
+  exit 1
 fi
 
 code_job_execute=$(echo "$repsonse_job_execute" | sed -n 's/.*"code":\([0-9]*\).*/\1/p')
@@ -51,40 +51,40 @@ job_execution_id=$(echo "$repsonse_job_execute" | sed -n 's/.*"data":\([0-9]*\).
 
 # 判断 job_execute 接口返回的 code 是否为 200
 if [ "$code_job_execute" -ne 200 ]; then
-echo "[DATAVINES][ERROR]: job execute response : $repsonse_job_execute"
-exit 1
+  echo "[DATAVINES][ERROR]: job execute response : $repsonse_job_execute"
+  exit 1
 fi
 
 echo "[DATAVINES][INFO]: job execution id is $job_execution_id"
 
 # 检查 id 是否为空
 if [ -z "$job_execution_id" ]; then
-echo "[DATAVINES][ERROR]: job execute repsonse id is null, exit"
-exit 1
+  echo "[DATAVINES][ERROR]: job execute repsonse id is null, exit"
+  exit 1
 fi
 
 # 轮询 job_execution_status 接口
 while true; do
-# 调用 job_execution_status 接口（GET）
-response_job_execution_status=$(curl -s -X GET "$job_execution_status_url/$job_execution_id" -H "Authorization: Bearer ${token}")
+  # 调用 job_execution_status 接口（GET）
+  response_job_execution_status=$(curl -s -X GET "$job_execution_status_url/$job_execution_id" -H "Authorization: Bearer ${token}")
 
-# 提取 job_execution_status 接口返回的 code 和 data 值
-code_job_execution_status=$(echo "$response_job_execution_status" | sed -n 's/.*"code":\([0-9]*\).*/\1/p')
-data_job_execution_status=$(echo "$response_job_execution_status" | sed -n 's/.*"data":"\([^"]*\)".*/\1/p')
+  # 提取 job_execution_status 接口返回的 code 和 data 值
+  code_job_execution_status=$(echo "$response_job_execution_status" | sed -n 's/.*"code":\([0-9]*\).*/\1/p')
+  data_job_execution_status=$(echo "$response_job_execution_status" | sed -n 's/.*"data":"\([^"]*\)".*/\1/p')
 
-# 判断 job_execution_status 接口返回的 code 是否为 200
-if [ "$code_job_execution_status" -ne 200 ]; then
-echo "[DATAVINES][ERROR]: job execution status repsonse is error: $response_job_execution_result"
-exit 1
-fi
+  # 判断 job_execution_status 接口返回的 code 是否为 200
+  if [ "$code_job_execution_status" -ne 200 ]; then
+    echo "[DATAVINES][ERROR]: job execution status repsonse is error: $response_job_execution_result"
+    exit 1
+  fi
 
-# 检查返回的 data 值
-if [ "$data_job_execution_status" == "FAILURE" ]; then
-echo "[DATAVINES][ERROR]: job execution status is $data_job_execution_status , exit"
-exit 1
-elif [ "$data_job_execution_status" == "SUCCESS" ]; then
-echo "[DATAVINES][INFO]: job execution status is $data_job_execution_status , to get job execution result"
-
+  # 检查返回的 data 值
+  if [ "$data_job_execution_status" == "FAILURE" ]; then
+    echo "[DATAVINES][ERROR]: job execution status is $data_job_execution_status , exit"
+    exit 1
+  elif [ "$data_job_execution_status" == "SUCCESS" ]; then
+    echo "[DATAVINES][INFO]: job execution status is $data_job_execution_status , to get job execution result"
+    
     # 调用 job_execution_result 接口（GET）
     repsonse_job_execution_result=$(curl -s -X GET "$job_execution_result_url/$job_execution_id" -H "Authorization: Bearer ${token}")
 
@@ -106,13 +106,13 @@ echo "[DATAVINES][INFO]: job execution status is $data_job_execution_status , to
       echo "[DATAVINES][INFO]: job execution result is $data_job_execution_result"
       exit 1
     fi
-else
-# data_job_execution_status 为其他值时记录日志，但不中断执行
-echo "[DATAVINES][INFO]: job execution status is $data_job_execution_status , continute"
-fi
+  else
+    # data_job_execution_status 为其他值时记录日志，但不中断执行
+    echo "[DATAVINES][INFO]: job execution status is $data_job_execution_status , continute"
+  fi
 
-# 等待一段时间再进行下一次轮询
-sleep 2
+  # 等待一段时间再进行下一次轮询
+  sleep 2
 done
 ```
 
