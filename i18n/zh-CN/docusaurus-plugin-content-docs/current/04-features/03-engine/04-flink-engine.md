@@ -18,3 +18,6 @@ title: 'Flink 引擎'
 - 解压完安装包以后，将`./plugins/flink/`目录下的 `jar` 复制 `flink` 的`lib`目录下
 - 配置env环境变量，`FLINK_HOME`指向`flink`的安装目录
 ![数据质量检查规则环境变量配置](/doc/image/metric_job_env_flink.png)
+- 在参数配置页面添加`data.quality.flink.jar.name`配置`/libs/datavines-engine-flink-core-1.0.0-SNAPSHOT.jar`
+![参数配置](/doc/image/config_flink_jar.png)
+- 下载相应版本的`flink-connector-jdbc`包，并上传到`flink`的`lib`目录下
