@@ -1,64 +1,146 @@
 ---
 id: 'column-not-null'
-title: '非空检查'
+title: '列非空检查'
+sidebar_position: 2
 ---
-## 使用方法
-- 点击创建规则作业，选择数据质量作业
-- 进入作业页面选择 非空检查 规则
-- 选择要检查的数据源信息
 
-## 参数介绍
-### Options
+# 列非空检查
 
-|             name             |  type  |  required  | default value |
-|:----------------------------:|:------:|:----------:|:-------------:|
-| [database](#database-string) | string |    yes     |       -       |
-|    [table](#table-string)    | string |    yes     |       -       |
-|   [column](#column-string)   | string |    yes     |       -       |
+## 概述
 
-#### database [string]
-源表数据库名
-#### table [string]
-源表数据库中的表名
-#### column [string]
-要检查的列
+`column_not_null` 检查规则用于验证指定列是否不包含空值。这是最常用的数据质量检查之一,用于确保数据的完整性。
 
-### 配置文件例子
+## 业务场景
+
+该检查规则适用于以下场景:
+
+- **必填字段验证**:确保必填字段(如用户ID、订单号等)不为空
+- **数据完整性检查**:验证关键业务字段的完整性
+- **ETL流程验证**:确保数据转换过程不产生空值
+- **合规性要求**:满足数据治理要求,某些字段必须有值
+
+## 配置参数
+
+| 参数 | 类型 | 必填 | 说明 |
+|------|------|------|------|
+| 数据库 | String | 是 | 目标数据库名称 |
+| 表 | String | 是 | 目标表名称 |
+| 列 | String | 是 | 需要检查的列名 |
+| 过滤条件 | String | 否 | 过滤条件(WHERE子句) |
+
+## 指标计算
+
+该检查规则会计算以下指标:
+
+- **总记录数**:表中的总记录数或过滤后的记录数
+- **非空记录数**:列值不为空的记录数
+- **空值记录数**:列值为空的记录数(总记录数 - 非空记录数)
+- **非空率**:非空值占比(非空记录数 / 总记录数 * 100%)
+
+## 生成的SQL
+
+DataVines 会根据配置自动生成 SQL 语句:
+
+```sql
+SELECT 
+    COUNT(*) as total_count,
+    COUNT(column_name) as not_null_count,
+    COUNT(*) - COUNT(column_name) as null_count,
+    CASE 
+        WHEN COUNT(*) = 0 THEN 0 
+        ELSE COUNT(column_name) * 100.0 / COUNT(*) 
+    END as not_null_rate
+FROM database_name.table_name
+WHERE filter_condition;
 ```
-{
-    "metricType": "column_not_null",
-    "metricParameter": {
-        "database": "datavines",
-        "table": "dv_catalog_entity_instance",
-        "column": "type"
-    }
-}
+
+## 期望值
+
+可以配置期望值来判断检查是否通过:
+
+- **固定值**:非空记录数必须等于某个值
+- **范围值**:非空记录数必须在某个范围内
+- **百分比**:非空率必须达到某个百分比(如100%)
+- **同比前一天**:与前一天的非空记录数进行比较,检测异常
+
+## SLA配置
+
+可以配置 SLA 告警条件,例如:
+
+- 非空率低于95%时告警
+- 空值记录数超过100时告警
+- 非空率相比前一天下降超过5%时告警
+
+## 最佳实践
+
+### 1. 优先检查核心字段
+
+对于业务关键字段,应优先配置非空检查,例如:
+- 主键、外键字段
+- 必填的业务字段
+- 关键指标字段
+
+### 2. 合理使用过滤条件
+
+针对特定的业务场景,可以使用过滤条件来缩小检查范围:
+
+```sql
+-- 只检查最近7天的订单
+WHERE create_time >= DATE_SUB(CURRENT_DATE, INTERVAL 7 DAY)
+
+-- 只检查特定状态的记录
+WHERE status = 'ACTIVE'
 ```
 
-### 检查过程中自动生成的 `SQL` 语句
+### 3. 设置合理的阈值
 
-检查过程会用到的一些自动生成的参数，用于区分各个检查规则。
-- uniqueKey
-    - 会根据每个规则的配置信息生成一个唯一键值
-- invalidate_items_table
-    - 会创建一个视图用于存储中间表数据，中间表数据一般为命中规则的数据，即为错误数据，该视图的名字生成规则为 invalidate_items_uniqueKey
+根据业务需求,设置合理的 SLA 阈值:
+- 对于严格的必填字段,非空率阈值应设置为100%
+- 对于可选字段,可以根据业务需求设置合理的阈值
 
-中间表 invalidate_items_uniqueKey
+### 4. 监控趋势变化
+
+除了单次检查,还应该关注非空率的趋势变化,及早发现数据质量下降的趋势。
+
+## 相关检查规则
+
+- [列空值检查](03-column-null.md):与本检查相反,验证列包含空值
+- [列唯一性检查](20-column-unique.md):验证列值的唯一性
+- [自定义聚合SQL](01-custom-aggregate-sql.md):通过自定义SQL实现更复杂的非空检查
+
+## 示例
+
+### 场景描述
+
+验证用户订单表 `orders` 中的 `user_id` 字段不为空,确保每个订单都关联到用户。
+
+### 配置
+
+- **数据库**:`ecommerce`
+- **表**:`orders`
+- **列**:`user_id`
+- **过滤条件**:`create_time >= CURRENT_DATE`(只检查今天的订单)
+- **期望值**:非空率 = 100%
+- **SLA**:非空率低于100%时告警
+
+### 执行结果
+
 ```
-select * from ${table} where ${column} is not null and ${filter}
+总记录数: 1000
+非空记录数: 998
+空值记录数: 2
+非空率: 99.8%
 ```
-计算实际值的 `SQL` 
-```
-select count(1) as actual_value_" + uniqueKey + " from ${invalidate_items_table}
-```
 
-## 使用案例
+### 结果解读
 
-### 场景
-...
+检查发现有2条订单的 `user_id` 字段为空。这违反了期望的非空率100%的要求,触发 SLA 告警。数据质量团队应该进一步排查:
 
-### 思路
-...
+1. 这2条订单为什么没有用户ID?
+2. 是否是游客下单的场景?
+3. 是否需要调整业务逻辑允许游客下单?
+4. 或者需要修复订单创建流程确保用户ID不为空?
 
-### 步骤
-...
+## 总结
+
+列非空检查是最基础的数据质量检查之一,帮助确保数据的完整性和一致性。通过合理的配置和监控,可以及早发现和解决数据质量问题,保障数据的准确性和业务的连续性。
