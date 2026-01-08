@@ -28,6 +28,9 @@ const config = {
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'image/favicon.ico',
+  markdown: {
+    mermaid: true,
+  },
   i18n: {
     defaultLocale: "zh-CN",
     locales: ["en", "zh-CN"],
@@ -56,6 +59,7 @@ const config = {
         language: ["zh", "en"]
       }),
     ],
+    '@docusaurus/theme-mermaid',
   ],
   presets: [
     [
